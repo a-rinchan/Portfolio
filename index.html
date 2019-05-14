@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yoshizawa Ayaka Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('.side-menu').hover(
+                function() {
+                    $(this).stop(true).animate({
+                        'padding-left': '150px'
+                    }, 300);
+                },
+                function() {
+                    $(this).animate({
+                        'padding-left': '0px'
+                    }, 300);
+                }
+            );
+        });
+    </script>
+    <script>
+        $(function() {
+            $('#openModal').click(function() {
+                $('#modalArea').fadeIn();
+            });
+            $('#closeModal , #modalBg').click(function() {
+                $('#modalArea').fadeOut();
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="side-menu">
+        <div class="side-menu-inner">
+            <ul>
+                <li><a href="#about"><span class="nom">1</span>About</a></li>
+                <li><a href="#work"><span class="nom">2</span>Work</a></li>
+                <li><a href="#skill"><span class="nom">3</span>Skill</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header sticky">
+        <h2>PORTFOLIO</h2>
+        <h1>Yoshizawa Ayaka</h1>
+        <h2>Web Design / Android</h2>
+    </div>
+
+    <div class="wapper sticky">
+        <div id="about">
+            <h1>About</h1>
+            <div class="aboutimg">
+                <img src="img/idphoto.jpg" alt="">
+            </div>
+            <div class="aboutme">
+                <h2>吉澤　彩花</h2>
+                <p>1998年、東京生まれ。</p>
+                <p>現在は、明治大学理工学部情報科学科3年在学中。</p>
+                <p>大学に入学後から、C/Javaを使い、コンピュータの基礎を学ぶ。</p>
+                <p>2018年夏からは、ライフイズテック株式会社にてWebデザイナー /</p>
+                <p>LINEスタンプ / デザイナー / Androidコースのメンターとして働く。</p>
+            </div>
+        </div>
+        <div id="work" class="work">
+            <h1>Work</h1>
+
+            <button id="openModal" class="working"><img src="img/Gakupuro_wide.png" alt="" ></button>
+
+            <div id="modalArea" class="
+               modalArea">
+                <div id="modalBg" class="modalBg"></div>
+                <div class="modalWapper">
+                    <div class="modalContents">
+                        <img src="img/NoImage.jpg" alt="" class="modalImage">
+                        <div class="modalSentence">
+                            <h1>Meiji Student Project</h1>
+                            <p>Life is Tech株式会社Leaders研修の最終制作物。</p>
+                            <p>明治大学の「学生プロジェクト」という団体がオープンキャンパス当日に行うイベントを受験生に紹介するサイト。</p>
+                            <p>限られたオープンキャンパスの時間の中で、大学をよく知り、入りたいと思える企画を前もって知って来てほしいという思いから作成しました。</p>
+                            <p>制作時期 : 2018.05 - 06</p>
+                            <p>制作期間 : 1ヵ月</p>
+                            <p>サイトは<a href="">こちら</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="closeModal" class="closeModal">
+                    <img src="img/close.png" alt="">
+                </div>
+            </div>
+
+
+            
+            <button id="openModal" class="working"><img src="img/header_wide.png" alt="" ></button>
+            <div id="modalArea" class="
+               modalArea">
+                <div id="modalBg" class="modalBg"></div>
+                <div class="modalWapper">
+                    <div class="modalContents">
+                        <img src="img/NoImage.jpg" alt="" class="modalImage">
+
+                        <div class="modalSentence">
+                            <h1>Yoshizawa Ayaka Portfolio</h1>
+                            <p>本サイト。</p>
+                            <p>制作時期 : 2019.04 - 05</p>
+                            <p>制作期間 : 1ヵ月</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="closeModal" class="closeModal">
+                </div>
+            </div>
+            
+            <button id="openModal" class="working"><img src="img/header_wide.png" alt="" ></button>
+            <div id="modalArea" class="
+               modalArea">
+                <div id="modalBg" class="modalBg"></div>
+                <div class="modalWapper">
+                    <div class="modalContents">
+                        <img src="img/NoImage.jpg" alt="" class="modalImage">
+
+                        <div class="modalSentence">
+                            <h1>センタクindex</h1>
+                            <p>Android App</p>
+                            <p>Life is TechのLeaders for Schoolで制作。</p>
+                            <p>洗濯が大変なおしゃれ着を一着ずつ、おすすめの洗濯日を教えてくれるアプリ。</p>
+                            <p>将来の展望としては、画像も一緒に保存できるようにして、クローゼット替わりにも使ってもらえるようにしたいと思っています。</p>
+                            <p>使用言語 : Java</p>
+                            <p>制作時期 : 2019.03 - 05</p>
+                            <p>制作期間 : 2ヵ月</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="closeModal" class="closeModal">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="skill">
+            <h1>Skill</h1>
+            <div class="skill-p">
+                <p>HTML5 / CSS / jQuery / java / C</p>
+                <p>Illustrator / Photoshop / Premire</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer sticky">
+        <a href="https://www.facebook.com/yoshiayachan" class="hvr-buzz-out" target="_blank"><img src="img/fb.png" alt=""></a>
+
+        <a href="mailto:a-chan.177002@outlook.com" class="hvr-buzz-out" target="_blank"><img src="img/mail.png" alt=""></a>
+
+        <a href="https://github.com/a-rinchan" class="hvr-buzz-out" target="_blank"><img src="img/git.png" alt=""></a>
+    </div>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>

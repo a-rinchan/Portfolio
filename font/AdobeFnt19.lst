@@ -1,0 +1,101 @@
+%!Adobe-FontList 1.19
+%Locale:0x411
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:BernardMT-Condensed
+FamilyName:Bernard MT Condensed
+StyleName:Regular
+FullName:Bernard MT Condensed
+MenuName:Bernard MT Condensed
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\A-chan\Desktop\ポートフォリオ\Font\BERNHC.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:70656
+FileModTime:1542955298
+WeightClass:400
+WidthClass:3
+AngleClass:0
+NameArray:0,Mac,4,Bernard MT Condensed
+NameArray:0,Win,1,Bernard MT Condensed
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:FugazOne-Regular
+FamilyName:Fugaz One
+StyleName:Regular
+FullName:Fugaz One
+MenuName:Fugaz One
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\A-chan\Desktop\ポートフォリオ\Font\FugazOne-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:27868
+FileModTime:1542941786
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Fugaz One
+NameArray:0,Win,1,Fugaz One
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Gilam-BlackDEMO
+FamilyName:Gilam
+StyleName:Black DEMO
+FullName:Gilam Black DEMO
+MenuName:Gilam Black DEMO
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\A-chan\Desktop\ポートフォリオ\Font\Gilam-BlackDEMO.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:105544
+FileModTime:1542941973
+WeightClass:900
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Gilam Black DEMO
+NameArray:0,Win,1,Gilam Black DEMO
+NameArray:0,Win,16,Gilam
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Gilam-ThinItalicDEMO
+FamilyName:Gilam
+StyleName:Thin Italic DEMO
+FullName:Gilam Thin Italic DEMO
+MenuName:Gilam Thin Italic DEMO
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\A-chan\Desktop\ポートフォリオ\Font\Gilam-ThinItalicDEMO.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:97624
+FileModTime:1542941973
+WeightClass:150
+WidthClass:5
+AngleClass:1
+NameArray:0,Mac,4,Gilam Thin Italic DEMO
+NameArray:0,Win,1,Gilam Thin Italic DEMO
+NameArray:0,Win,16,Gilam
+%EndFont
+

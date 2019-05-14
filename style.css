@@ -1,0 +1,533 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Thin Italic DEMO";
+    src: url('font/Gilam-ThinItalicDEMO.otf');
+}
+
+@font-face {
+    font-family: "Fugaz One";
+    src: url('Portfolio/font/FugazOne-Regular.otf');
+}
+
+@font-face {
+    font-family: "Bernard MT Condensed";
+    src: url('Portfolio/font/BERNHC.TTF');
+}
+
+@font-face {
+    font-family: "calist";
+    src: url('font/CALIST.TTF');
+}
+
+@font-face {
+    font-family: "HGP";
+    src: url('font/HGRKK.TTF');
+}
+
+@font-face {
+    font-family: "Franklin Gothic";
+    src: url('font/FRAHV.TTF');
+}
+
+/*サイドメニュー*/
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -100px;
+    width: 100px;
+    height: 620px;
+    padding: 0 50px 0 0px;
+    background: #dd1629;
+    z-index: 3;
+}
+
+.side-menu-inner {
+    width: 100%;
+    height: 620px;
+    overflow-y: auto;
+}
+
+.side-menu-inner a {
+    font-family: "Thin Italic DEMO";
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.side-menu-inner a:hover {
+    font-size: 22px;
+}
+
+
+ul {
+    margin-top: 200px;
+}
+
+li {
+    width: 100%;
+    height: 25px;
+    margin-top: 55px;
+    font-size: 18px;
+    list-style-type: none;
+}
+
+.nom {
+    font-family: "Fugaz One";
+    padding-right: 20px;
+}
+
+
+/*ヘッダー*/
+
+.sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+.header {
+    height: 120px;
+    background-color: #dd1629;
+    color: #fff;
+    text-align: center;
+    padding: 260px 0px 230px 0px;
+    box-shadow: 0px 2px 4px -2px gray inset;
+}
+
+
+.header h1 {
+    font-family: "Fugaz One";
+    color: #fff;
+}
+
+.header h2 {
+    font-family: "Thin Italic DEMO";
+}
+
+
+/*ワッパー*/
+
+.wapper {
+    background: #fff;
+}
+
+.wapper h1 {
+    font-family: 'Fugaz One';
+    width: 160px;
+    padding: 80px 40px 50px 120px;
+    font-size: 37px;
+    float: left;
+    color: #3e3a39;
+}
+
+.wapper h2 {
+    font-family: 'calist';
+    padding: -80px 50px 0px 80px;
+}
+
+
+/*About*/
+
+#about {
+    height: 380px;
+}
+
+.aboutimg {
+    padding-top: 130px;
+    float: left;
+}
+
+#about img {
+    width: 230px;
+    border-radius: 5px;
+}
+
+.aboutme {
+    padding: 130px 95px 0px 630px;
+}
+
+.aboutme h2 {
+    font-family: 'HGP';
+    font-size: 35px;
+    padding-bottom: 40px;
+}
+
+.aboutme p {
+    font-family: '游ゴシック';
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/*Working*/
+
+.work h1{
+    padding-bottom: 300px;
+}
+.working {
+    padding-top: 90px;
+}
+
+.working img {
+    width: 350px;
+    transition: all .2s;
+    z-index: 3;
+    margin-right: 60px;
+    border-radius: 5px;
+}
+
+#openModal: hover {
+    border: 2px solid #dd1629;
+}
+
+.working img::before,
+.working img::after {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: 2;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 2px solid transparent;
+    border-radius: 15px;
+}
+
+.working img:hover {
+    color: #dd1629;
+}
+
+.working img:hover::before,
+.working img:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.working img:hover::before {
+    border-top-color: #dd1629;
+    border-right-color: #dd1629;
+    transition: width .3s, height .3s .3s;
+}
+
+.working img:hover::after {
+    border-bottom-color: #dd1629;
+    border-left-color: #dd1629;
+    transition: height .3s, width .3s .3s;
+}
+
+
+
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+    border-radius: 5px;
+}
+
+/* モーダルCSS */
+
+.modalArea {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    /*サイトによってここの数値は調整 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 30, 0.9);
+}
+
+.modalWapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 900px;
+    padding: 10px 30px;
+    background-color: #fff;
+}
+
+.closeModal {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.closeModal img{
+    width: 30px;
+    margin: 15px 30px;
+}
+
+.modalImage {
+    width: 300px;
+    float: left;
+}
+
+.modalSentence {
+    width: 500px;
+    float: left;
+    padding: 30px;
+}
+
+.modalSentence h1 {
+    width: 500px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic';
+    color: #dd1629;
+    padding: 0px 0px 30px 0px;
+    float: none;
+}
+
+.modalSentence p {
+    font-size: 12px;
+    font-family: '游ゴシック';
+    font-weight: 500;
+}
+
+.modalSentence a {
+    text-decoration: none;
+    color: #ee1629;
+    font-weight: 600;
+}
+
+/*Skill*/
+
+#skill {
+    height: 280px;
+}
+
+.skill-p {
+    padding-top: 130px;
+}
+
+.skill p {
+    padding-left: 120px;
+}
+
+
+/*Fotter*/
+
+.footer {
+    height: 60px;
+    background-color: #504f50;
+    text-align: center;
+}
+
+.footer img {
+    width: 40px;
+    padding: 10px 20px 0px 20px;
+}
+
+/* Buzz Out */
+
+@-webkit-keyframes hvr-buzz-out {
+    10% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+    20% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+    30% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+    40% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+    50% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+    }
+    60% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+    }
+    70% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+    }
+    80% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+    }
+    90% {
+        -webkit-transform: translateX(1px) rotate(0);
+        transform: translateX(1px) rotate(0);
+    }
+    100% {
+        -webkit-transform: translateX(-1px) rotate(0);
+        transform: translateX(-1px) rotate(0);
+    }
+}
+
+@keyframes hvr-buzz-out {
+    10% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+    20% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+    30% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+    40% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+    50% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+    }
+    60% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+    }
+    70% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+    }
+    80% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+    }
+    90% {
+        -webkit-transform: translateX(1px) rotate(0);
+        transform: translateX(1px) rotate(0);
+    }
+    100% {
+        -webkit-transform: translateX(-1px) rotate(0);
+        transform: translateX(-1px) rotate(0);
+    }
+}
+
+.hvr-buzz-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.hvr-buzz-out:hover,
+.hvr-buzz-out:focus,
+.hvr-buzz-out:active {
+    -webkit-animation-name: hvr-buzz-out;
+    animation-name: hvr-buzz-out;
+    -webkit-animation-duration: 0.60s;
+    animation-duration: 0.60s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+
+/*スマートフォン対応*/
+
+@media screen and (max-width: 480px) {
+    .side-menu {
+        display: none;
+    }
+
+
+    .wapper h1 {
+        padding-top: 30px;
+        padding-bottom: 20px;
+        font-family: 'Fugaz One';
+        text-align: center;
+        font-size: 30px;
+        color: #3e3a39;
+    }
+
+    #about {
+        height: auto;
+    }
+    .aboutimg {
+        padding-top: 0;
+        text-align: center;
+        float: none;
+    }
+    .aboutme {
+        padding: 0;
+        text-align: center;
+    }
+    .aboutme h2 {
+        font-family: 'HGP';
+        text-align: center;
+        font-size: 25px;
+        padding-bottom: 30px;
+    }
+
+    .aboutme p {
+        font-family: '游明朝';
+        font-size: 12px;
+    }
+
+    .working {
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .working img {
+        width: 250px;
+        border-radius: 15px;
+        transition: all .2s;
+        z-index: 3;
+    }
+
+    /*    modal*/
+    .modalContents h1 {
+        font-size: 15px;
+        font-family: 'Franklin Gothic';
+        color: #dd1629;
+        padding: 0px;
+        float: none;
+    }
+
+    .modalContents p {
+        font-size: 12px;
+        font-family: '游明朝';
+    }
+
+    .modalContents a {
+        color: #dd1629;
+        font-weight: 400;
+        text-decoration: none;
+    }
+    /*Skill*/
+    #skill {
+        height: 260px;
+    }
+    #skill h1 {
+        float: none;
+    }
+    .skill-p {
+        padding: 0px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+}
