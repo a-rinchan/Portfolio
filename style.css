@@ -15,22 +15,22 @@
 
 @font-face {
     font-family: "Bernard MT Condensed";
-    src: url('font/BERNHC.TTF') format("opentype");
+    src: url('font/BERNHC.TTF') format("truetype");
 }
 
 @font-face {
     font-family: "calist";
-    src: url('font/CALIST.TTF') format("opentype");
+    src: url('font/CALIST.TTF') format("truetype");
 }
 
 @font-face {
     font-family: "HGP";
-    src: url('font/HGRKK.TTF') format("opentype");
+    src: url('font/HGRKK.TTF') format("truetype");
 }
 
 @font-face {
     font-family: "Franklin Gothic";
-    src: url('font/FRAHV.TTF') format("opentype");
+    src: url('font/FRAHV.TTF') format("truetype");
 }
 
 /*サイドメニュー*/
