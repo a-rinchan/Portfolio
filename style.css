@@ -5,32 +5,32 @@
 
 @font-face {
     font-family: "Thin Italic DEMO";
-    src: url('font/Gilam-ThinItalicDEMO.otf');
+    src: url('font/Gilam-ThinItalicDEMO.otf') format("opentype");
 }
 
 @font-face {
     font-family: "Fugaz One";
-    src: url('font/FugazOne-Regular.otf');
+    src: url('font/FugazOne-Regular.otf') format("opentype");
 }
 
 @font-face {
     font-family: "Bernard MT Condensed";
-    src: url('font/BERNHC.TTF');
+    src: url('font/BERNHC.TTF') format("opentype");
 }
 
 @font-face {
     font-family: "calist";
-    src: url('font/CALIST.TTF');
+    src: url('font/CALIST.TTF') format("opentype");
 }
 
 @font-face {
     font-family: "HGP";
-    src: url('font/HGRKK.TTF');
+    src: url('font/HGRKK.TTF') format("opentype");
 }
 
 @font-face {
     font-family: "Franklin Gothic";
-    src: url('font/FRAHV.TTF');
+    src: url('font/FRAHV.TTF') format("opentype");
 }
 
 /*サイドメニュー*/
