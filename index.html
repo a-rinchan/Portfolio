@@ -25,11 +25,17 @@
     </script>
     <script>
         $(function() {
-            $('#openModal').click(function() {
-                $('#modalArea').fadeIn();
+            // モーダルのボタンをクリックした時
+            $('.modal_trigger .modal_btn').on('click', function() {
+                var btnIndex = $(this).index(); // 何番目のモーダルボタンかを取得
+                $('.modal_area').css('display', 'block');
+                $('.modal_area .modal_box').eq(btnIndex).fadeIn(); // クリックしたモーダルボタンと同じ番目のモーダルを表示する
             });
-            $('#closeModal , #modalBg').click(function() {
-                $('#modalArea').fadeOut();
+
+            // ×やモーダルの背景をクリックした時
+            $('.modal_close , .modal_bg').click(function() {
+                $('.modal_box').fadeOut(); // モーダルを非表示にする
+                $('.modal_area').css('display', 'none');
             });
         });
     </script>
@@ -49,14 +55,14 @@
     <div class="header sticky">
         <h2>PORTFOLIO</h2>
         <h1>Yoshizawa Ayaka</h1>
-        <h2>Web Design / Android</h2>
+        <h2>Android / Web Design</h2>
     </div>
 
     <div class="wapper sticky">
         <div id="about">
             <h1>About</h1>
             <div class="aboutimg">
-                <img src="img/idphoto.jpg" alt="">
+                <img src="img/idphoto2.jpg" alt="">
             </div>
             <div class="aboutme">
                 <h2>吉澤　彩花</h2>
@@ -67,90 +73,86 @@
                 <p>LINEスタンプ / デザイナー / Androidコースのメンターとして働く。</p>
             </div>
         </div>
+
         <div id="work" class="work">
             <h1>Work</h1>
 
-            <button id="openModal" class="working"><img src="img/Gakupuro_wide.png" alt="" ></button>
+            <ul class="modal_trigger">
+                <li class="modal_btn"><img src="img/Gakupuro_wide.png" alt=""></li>
+                <li class="modal_btn"><img src="img/header_wide.png" alt=""></li>
+                <li class="modal_btn"><img src="img/Tdelay_header.png" alt="">
+                </li>
+            </ul>
 
-            <div id="modalArea" class="
-               modalArea">
-                <div id="modalBg" class="modalBg"></div>
-                <div class="modalWapper">
-                    <div class="modalContents">
-                        <img src="img/NoImage.jpg" alt="" class="modalImage">
-                        <div class="modalSentence">
-                            <h1>Meiji Student Project</h1>
-                            <p>Life is Tech株式会社Leaders研修の最終制作物。</p>
-                            <p>明治大学の「学生プロジェクト」という団体がオープンキャンパス当日に行うイベントを受験生に紹介するサイト。</p>
-                            <p>限られたオープンキャンパスの時間の中で、大学をよく知り、入りたいと思える企画を前もって知って来てほしいという思いから作成しました。</p>
-                            <p>制作時期 : 2018.05 - 06</p>
-                            <p>制作期間 : 1ヵ月</p>
-                            <p>サイトは<a href="">こちら</a></p>
+            <div class="modal_area">
+                <div class="modal_box">
+                    <div class="modal_bg"><img src="img/close.png" alt=""></div>
+                    <div class="modal_inner">
+                        <div class="modal_block">
+                            <div class="modalSentence">
+                                <h1>Meiji Student Project</h1>
+                                <p>Webサイト</p>
+                                <p>Life is Tech株式会社Leaders研修の最終制作物。</p>
+                                <p>明治大学の「学生プロジェクト」という団体がオープンキャンパス当日に行うイベントを受験生に紹介するサイト。</p>
+                                <p>限られたオープンキャンパスの時間の中で、大学をよく知り、入りたいと思える企画を前もって知って来てほしいという思いから作成しました。</p>
+                                <p>制作時期 : 2018.05 - 06</p>
+                                <p>制作期間 : 1ヵ月</p>
+                                <p>サイトは<a href="" target="_blank">こちら</a></p>
+                            </div>
                         </div>
+                        <div class="modal_close"></div>
                     </div>
                 </div>
-                <div id="closeModal" class="closeModal">
-                    <img src="img/close.png" alt="">
-                </div>
-            </div>
 
-
-            
-            <button id="openModal" class="working"><img src="img/header_wide.png" alt="" ></button>
-            <div id="modalArea" class="
-               modalArea">
-                <div id="modalBg" class="modalBg"></div>
-                <div class="modalWapper">
-                    <div class="modalContents">
-                        <img src="img/NoImage.jpg" alt="" class="modalImage">
-
-                        <div class="modalSentence">
-                            <h1>Yoshizawa Ayaka Portfolio</h1>
-                            <p>本サイト。</p>
-                            <p>制作時期 : 2019.04 - 05</p>
-                            <p>制作期間 : 1ヵ月</p>
+                <div class="modal_box">
+                    <div class="modal_bg"><img src="img/close.png" alt=""></div>
+                    <div class="modal_inner">
+                        <div class="modal_block">
+                            <div class="modalSentence">
+                                <h1>Yoshizawa Ayaka Portfolio</h1>
+                                <p>本サイト。</p>
+                                <p>制作時期 : 2019.04 - 05</p>
+                                <p>制作期間 : 1ヵ月</p>
+                            </div>
                         </div>
+                        <div class="modal_close"></div>
                     </div>
                 </div>
-                <div id="closeModal" class="closeModal">
-                </div>
-            </div>
-            
-            <button id="openModal" class="working"><img src="img/header_wide.png" alt="" ></button>
-            <div id="modalArea" class="
-               modalArea">
-                <div id="modalBg" class="modalBg"></div>
-                <div class="modalWapper">
-                    <div class="modalContents">
-                        <img src="img/NoImage.jpg" alt="" class="modalImage">
 
-                        <div class="modalSentence">
-                            <h1>センタクindex</h1>
-                            <p>Android App</p>
-                            <p>Life is TechのLeaders for Schoolで制作。</p>
-                            <p>洗濯が大変なおしゃれ着を一着ずつ、おすすめの洗濯日を教えてくれるアプリ。</p>
-                            <p>将来の展望としては、画像も一緒に保存できるようにして、クローゼット替わりにも使ってもらえるようにしたいと思っています。</p>
-                            <p>使用言語 : Java</p>
-                            <p>制作時期 : 2019.03 - 05</p>
-                            <p>制作期間 : 2ヵ月</p>
+                <div class="modal_box">
+                    <div class="modal_bg"><img src="img/close.png" alt=""></div>
+                    <div class="modal_inner">
+                        <div class="modal_block">
+                            <img src="img/MainActivity.png" alt="" class="app_image">
+                            <img src="img/AddActivity.png" alt="" class="app_image">
+                            <div class="modalSentence">
+                                <h1>センタクindex</h1>
+                                <p>Android App</p>
+                                <p>関東の電車の遅延をお知らせ。</p>
+                                <p>遅延情報が知りたい路線を登録しておくと、遅延の際にはホーム画面に表示されます。</p>
+                                <p>さわやかなイメージをもたせるために青色をベースに、アイコンやUIのデザインも行いました。</p>
+                                <p>これからの展望としては、現在1路線しか登録できないため、複数路線の登録や、通知機能を実装しようと考えています。</p>
+                                <p>使用言語 : Kotlin</p>
+                                <p>制作時期 : 2019.05</p>
+                                <p>制作期間 : 3日間</p>
+                                <p>Google Playは<a href="https://play.google.com/store/apps/details?id=com.a_rin.tdelay" target="_blank">こちら</a></p>
+                            </div>
                         </div>
+                        <div class="modal_close"></div>
                     </div>
-                </div>
-                <div id="closeModal" class="closeModal">
                 </div>
             </div>
         </div>
-
-
 
         <div id="skill">
             <h1>Skill</h1>
             <div class="skill-p">
-                <p>HTML5 / CSS / jQuery / java / C</p>
+                <p>HTML5 / CSS / jQuery / java / Kotlin /C</p>
                 <p>Illustrator / Photoshop / Premire</p>
             </div>
         </div>
     </div>
+
 
     <div class="footer sticky">
         <a href="https://www.facebook.com/yoshiayachan" class="hvr-buzz-out" target="_blank"><img src="img/fb.png" alt=""></a>
