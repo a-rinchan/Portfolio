@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: "Fugaz_One";
-    src: url('font/FugazOne-Regular.otf') format("truetype");
+    src: url('font/FugazOne-Regular.otf') format("opentype");
 }
 
 @font-face {
