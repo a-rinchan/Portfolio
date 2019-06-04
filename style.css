@@ -91,11 +91,9 @@
 }
 
 .header {
-    height: 120px;
+    height: 100vh;
     background-color: #dd1629;
-    color: #fff;
-    text-align: center;
-    padding: 260px 0px 230px 0px;
+    position: relative;
     box-shadow: 0px 2px 4px -2px gray inset;
 }
 
@@ -107,6 +105,15 @@
 
 .header h2 {
     font-family: "Thin Italic DEMO";
+}
+
+.header_contents{
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 
